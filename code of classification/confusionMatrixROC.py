@@ -195,7 +195,7 @@ def plot_boxplot():
     #plt.boxplot(arr_model[:, :10], '', positions=arr_empirical[:10])
     #plt.boxplot(arr_model, '', positions=arr_empirical)
     arr_total = sci.vstack((arr_empirical, arr_model)).T
-    arr_total_ordered = np.sort(arr_total, axis=0)
+    arr_total_ordered = arr_total # correct a bug here
     print(arr_total_ordered)
     arr_y = arr_total_ordered[:, 1:]
     arr_x = arr_total_ordered[:, 0]
