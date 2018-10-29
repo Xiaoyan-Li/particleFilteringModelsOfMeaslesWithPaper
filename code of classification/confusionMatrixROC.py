@@ -7,7 +7,7 @@ from sklearn import metrics
 from operator import itemgetter
 
 def import_data():
-    df_model_raw = pd.read_csv('outParticleInfectiveReportCasesCountSampled.csv',delimiter=',')
+    df_model_raw = pd.read_csv('outParticleInfectiveReportCasesCountSampled.csv',delimiter='\t')
 
     df_model = df_model_raw.ix[:'c', :432]
     df_empirical_raw = pd.read_csv('empiricalData.csv',delimiter=',') #\t
@@ -216,9 +216,9 @@ def plot_boxplot():
 
 
 
-main_confusion_matrix()
+#main_confusion_matrix()
 #main_plot_roc()
-#main_plot_median_mean()
+main_plot_median_mean()
 #plot_boxplot()
 
 
